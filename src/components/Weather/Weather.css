@@ -1,0 +1,85 @@
+.weather-widget {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .weather-form {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .city-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 200px;
+    outline: none;
+  }
+  
+  .get-weather-button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .get-weather-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .weather-details {
+    margin-top: 20px;
+  }
+  
+  .weather-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .weather-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .weather-temp{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;  }
+  .weather-main,
+  .weather-wind,
+  .weather-sun {
+    flex-basis: 30%;
+  }
+  
+  .weather-main p,
+  .weather-wind p,
+  .weather-sun p {
+    margin-bottom: 8px;
+  }
+  
+  .weather-description {
+    margin-top: 20px;
+  }
+  
+  .weather-description p {
+    margin-bottom: 8px;
+  }
+  
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
