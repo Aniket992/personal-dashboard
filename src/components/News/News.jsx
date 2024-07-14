@@ -5,7 +5,6 @@ import "./News.css";
 const News = () => {
   const [news, setNews] = useState([]);
   const [country, setCountry] = useState("in");
-  const [language, setLanguage] = useState("en");
   const [category, setCategory] = useState("general");
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -14,12 +13,11 @@ const News = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://api.worldnewsapi.com/top-news?api-key=274588acd8674921a9c38691909d0493&source-country=${country}&language=${language}&category=${category}`
+        `https://api.worldnewsapi.com/top-news?api-key=274588acd8674921a9c38691909d0493&source-country=${country}&language=en&category=${category}`
       );
 
       const topNews = response.data.top_news.map(item => item.news[0]);
       setNews(topNews);
-      console.log(response.data);
     } catch (error) {
       setError('Failed to fetch news data');
       console.error('Error fetching news:', error);
@@ -52,26 +50,33 @@ const News = () => {
     <div className="news-container">
       <h1>Top News Headlines</h1>
       <div className="input-container">
-        <input
-          type="text"
-          value={country}
-          onChange={handleCountryChange}
-          placeholder="Enter country code"
-          className="news-input"
-        />
-        <select
-          value={category}
-          onChange={handleCategoryChange}
-          className="news-select"
-        >
-          <option value="general">General</option>
-          <option value="business">Business</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="health">Health</option>
-          <option value="science">Science</option>
-          <option value="sports">Sports</option>
-          <option value="technology">Technology</option>
-        </select>
+        <label className="news-label">
+          Enter country name:
+          <input
+            type="text"
+            value={country}
+            onChange={handleCountryChange}
+            placeholder="Enter country code"
+            className="news-input"
+          />
+        </label>
+        
+        <label className="news-label">
+          Select category:
+          <select
+            value={category}
+            onChange={handleCategoryChange}
+            className="news-select"
+          >
+            <option value="general">General</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Health</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+          </select>
+        </label>
         <button onClick={handleFetchNews} className="fetch-news-btn">
           Fetch News
         </button>

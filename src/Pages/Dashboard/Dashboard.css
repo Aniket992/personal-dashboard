@@ -1,4 +1,3 @@
-/* Dashboard.css */
 
 .main-container {
     display: flex;
@@ -26,8 +25,8 @@
       align-items: flex-start;
     }
   
-    .weather-section,
-    .news-section {
+    .weather-section
+     {
       width: 45%;
     }
   }
