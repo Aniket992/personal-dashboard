@@ -63,6 +63,5 @@ Ensure you have valid API keys for these services and add them to your .env file
 
 ## Project-structure
 
-![Project Structure][def]
 
-[def]: project-structure.png
+[../project-structure.png]
