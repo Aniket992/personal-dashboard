@@ -62,4 +62,30 @@ World News API for fetching news headlines.
 Ensure you have valid API keys for these services and add them to your .env file as described in the installation steps.
 
 ## Project-structure
-project-structure.png
+weather-news-dashboard/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Weather/
+│   │   │   ├── Weather.js
+│   │   │   ├── Weather.css
+│   │   │   └── ...
+│   │   ├── News/
+│   │   │   ├── News.js
+│   │   │   ├── News.css
+│   │   │   └── ...
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Dashboard/
+│   │   │   ├── Dashboard.js
+│   │   │   ├── Dashboard.css
+│   │   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .env
+├── package.json
+├── README.md
+└── project-structure.png
